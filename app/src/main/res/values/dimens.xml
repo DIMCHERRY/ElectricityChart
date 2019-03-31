@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="x30">12dp</dimen>
+    <dimen name="x50">20dp</dimen>
+    <dimen name="x60">24dp</dimen>
+    <dimen name="x80">30dp</dimen>
+    <dimen name="x100">36dp</dimen>
+    <dimen name="x200">128dp</dimen>
+</resources>

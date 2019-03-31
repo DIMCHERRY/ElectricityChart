@@ -1,0 +1,71 @@
+<resources>
+    <string name="app_name">ElectricityChart</string>
+
+
+    <!--Img contentDescription-->
+    <string name="img_logo">LOGO</string>
+    <string name="img_clear">清除图标</string>
+    <string name="img_showpsd">显示隐藏密码</string>
+
+    <!--res Button-->
+    <string name="login">登录</string>
+    <string name="register">注册</string>
+    <string name="inlib">入库</string>
+    <string name="outlib">出库</string>
+    <string name="lib">库存</string>
+    <string name="logon_out">退出登录</string>
+    <string name="language_set">语言</string>
+    <string name="btn_confirmin">确认入库</string>
+    <string name="btn_outconfirmin">确认出库</string>
+
+    <!--res EditText-->
+    <string name="hint_username">请输入用户名</string>
+    <string name="hint_password">请输入密码</string>
+    <string name="hint_inprice">请输入进货价</string>
+    <string name="hint_outprice">请输入出货价</string>
+    <string name="hint_email">请输入邮箱</string>
+
+    <!--res CB-->
+    <string name="cb_remember">记住密码</string>
+
+    <!--res TextView-->
+    <string name="tv_bh">编号:</string>
+    <string name="tv_carryp">包提规格:</string>
+    <string name="tv_boxp">包箱规格:</string>
+    <string name="tv_nump">本次共计</string>
+    <string name="tv_inprice">进货价:</string>
+    <string name="tv_outprice">零售价:</string>
+
+    <!--res Kotlin-->
+    <string name="pack_carry">每提%1$s饼</string>
+    <string name="pack_box">每箱%1$s提</string>
+    <string name="totalnum">%1$s饼</string>
+
+    <!--toolBar-->
+    <string name="toolbar_login">云茶追溯D端登录</string>
+    <string name="toolbar_home">首页</string>
+
+    <!--提示语句-->
+    <string name="netnowork_error">请求失败</string>
+    <string name="double_click">请勿重复点击</string>
+    <string name="qr_prompt">请将二维码置于取景框内</string>
+    <string name="choose_language">请选择语言类型</string>
+    <string name="is_logout">是否退出登录</string>
+    <string name="yes">确定</string>
+    <string name="cancel">取消</string>
+    <string name="isset_language">当前语言已经设置为该语言</string>
+    <string name="canal_qr">取消扫描</string>
+    <string name="lib_Remaining">库存剩余</string>
+    <string name="inprice_prompt">请输入进货价</string>
+    <string name="outprice_prompt">请输入零售价</string>
+    <string name="dont_hava_list">您还未添加任何列表</string>
+    <string name="permission_dialog_content">请注意:为了更好的使用软件，请确认权限的使用</string>
+    <string name="permission_dialog_title">提示</string>
+    <string name="permission_dialog_agree">了解</string>
+    <string name="please_real_qr">请扫描正确的二维码</string>
+    <string name="psd_check">请输入数字或字母</string>
+    <string name="dialog_close">关闭</string>
+    <string name="input_user_prompt">请输入用户名</string>
+    <string name="input_psd_prompt">请输入密码</string>
+    <string name="please_wait">请稍后..</string>
+</resources>

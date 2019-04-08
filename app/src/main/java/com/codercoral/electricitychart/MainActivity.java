@@ -38,51 +38,45 @@ public class MainActivity extends Activity {
         ButterKnife.bind(this);
         mLineChart = findViewById(R.id.chart);
 
-        findViewById(R.id.btn_show).setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                List<ILineDataSet> dataSets = mLineChart.getLineData().getDataSets();
-                for (ILineDataSet set : dataSets)
-                    set.setVisible(!set.isVisible());
-                mLineChart.animateXY(500, 500);
-                mLineChart.invalidate();
-            }
+        findViewById(R.id.btn_show).setOnClickListener(v -> {
+            List<ILineDataSet> dataSets = mLineChart.getLineData().getDataSets();
+            for (ILineDataSet set : dataSets)
+                set.setVisible(!set.isVisible());
+            mLineChart.animateXY(500, 500);
+            mLineChart.invalidate();
         });
 
-        findViewById(R.id.btn_update).setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
+        findViewById(R.id.btn_update).setOnClickListener(v -> {
 
-                //1,准备要更换的数据
-                List<Entry> entries = new ArrayList<>();
-                for (int i = 0; i < 12; i++)
-                    entries.add(new Entry(i, new Random().nextInt(300)));
+            //1,准备要更换的数据
+            List<Entry> entries = new ArrayList<>();
+            for (int i = 0; i < 12; i++)
+                entries.add(new Entry(i, new Random().nextInt(300)));
 
-                //2. 获取LineDataSet线条数据集
-                List<ILineDataSet> dataSets = mLineChart.getLineData().getDataSets();
+            //2. 获取LineDataSet线条数据集
+            List<ILineDataSet> dataSets = mLineChart.getLineData().getDataSets();
 
-                //是否存在
-                if (dataSets != null && dataSets.size() > 0) {
-                    //直接更换数据源
-                    for (ILineDataSet set : dataSets) {
-                        LineDataSet data = (LineDataSet) set;
-                        data.setValues(entries);
-                    }
-                } else {
-                    //重新生成LineDataSet线条数据集
-                    LineDataSet dataSet = new LineDataSet(entries, "Label"); // add entries to dataset
-                    dataSet.setDrawCircles(false);
-                    dataSet.setColor(Color.parseColor("#7d7d7d"));//线条颜色
-                    dataSet.setCircleColor(Color.parseColor("#7d7d7d"));//圆点颜色
-                    dataSet.setLineWidth(1f);//线条宽度
-                    LineData lineData = new LineData(dataSet);
-                    //是否绘制线条上的文字
-                    lineData.setDrawValues(false);
-                    mLineChart.setData(lineData);
+            //是否存在
+            if (dataSets != null && dataSets.size() > 0) {
+                //直接更换数据源
+                for (ILineDataSet set : dataSets) {
+                    LineDataSet data = (LineDataSet) set;
+                    data.setValues(entries);
                 }
-                //更新
-                mLineChart.invalidate();
+            } else {
+                //重新生成LineDataSet线条数据集
+                LineDataSet dataSet = new LineDataSet(entries, "Label"); // add entries to dataset
+                dataSet.setDrawCircles(false);
+                dataSet.setColor(Color.parseColor("#7d7d7d"));//线条颜色
+                dataSet.setCircleColor(Color.parseColor("#7d7d7d"));//圆点颜色
+                dataSet.setLineWidth(1f);//线条宽度
+                LineData lineData = new LineData(dataSet);
+                //是否绘制线条上的文字
+                lineData.setDrawValues(false);
+                mLineChart.setData(lineData);
             }
+            //更新
+            mLineChart.invalidate();
         });
 
         findViewById(R.id.btn_delete).setOnClickListener(new View.OnClickListener() {

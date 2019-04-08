@@ -1,9 +1,7 @@
 package com.codercoral.electricitychart;
 
-import android.Manifest;
-import android.app.Activity;
+import android.content.Context;
 import android.content.Intent;
-import android.content.pm.PackageManager;
 import android.os.Bundle;
 import android.os.Handler;
 import android.text.TextUtils;
@@ -17,21 +15,16 @@ import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import java.util.ArrayList;
-import java.util.List;
+import com.codercoral.electricitychart.base.BaseActivity;
 
-import androidx.annotation.NonNull;
-import androidx.core.app.ActivityCompat;
-import androidx.core.content.ContextCompat;
 import butterknife.BindView;
-import butterknife.ButterKnife;
 import butterknife.OnClick;
 import cn.bmob.v3.Bmob;
 import cn.bmob.v3.BmobUser;
 import cn.bmob.v3.exception.BmobException;
 import cn.bmob.v3.listener.SaveListener;
 
-public class LoginActivity extends Activity {
+public class LoginActivity extends BaseActivity {
 
     @BindView(R.id.logo)
     ImageView logo;
@@ -56,22 +49,36 @@ public class LoginActivity extends Activity {
     @BindView(R.id.pb)
     ProgressBar pb;
 
-    String[] permissions = new String[]{Manifest.permission.READ_PHONE_STATE, Manifest.permission.WRITE_EXTERNAL_STORAGE, Manifest.permission.ACCESS_WIFI_STATE};
-    List<String> mPermissionList = new ArrayList<>();
-
-    private static final int PERMISSION_REQUEST = 1;
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        //去除标题栏
-        requestWindowFeature(Window.FEATURE_NO_TITLE);
-        setContentView(R.layout.activity_login);
         Bmob.initialize(this, "c80c01865a80121e07991434d2a3ecfd");
-        ButterKnife.bind(this);
+    }
 
-        checkPermission();
+    @Override
+    public void initParms(Bundle parms) {
+
+    }
+
+    @Override
+    public int bindLayout() {
+        return R.layout.activity_login;
+    }
+
+    @Override
+    public void initView() {
+
+    }
+
+    @Override
+    public void doBusiness(Context mContext) {
+
+    }
+
+    @Override
+    public void widgetClick(View v) {
+
     }
 
     @OnClick({R.id.tv_register, R.id.btn_login})
@@ -136,43 +143,6 @@ public class LoginActivity extends Activity {
         pb.setVisibility(View.GONE);
     }
 
-    /**
-     * 检查权限
-     */
-    private void checkPermission() {
-        mPermissionList.clear();
-        /**
-         * 判断哪些权限未授予
-         */
-        for (int i = 0; i < permissions.length; i++) {
-            if (ContextCompat.checkSelfPermission(this, permissions[i]) != PackageManager.PERMISSION_GRANTED) {
-                mPermissionList.add(permissions[i]);
-            }
-        }
-        /**
-         * 判断是否为空
-         */
-        if (mPermissionList.isEmpty()) {//未授予的权限为空，表示都授予了
-            //delayEntryPage();
-        } else {//请求权限方法
-            String[] permissions = mPermissionList.toArray(new String[mPermissionList.size()]);//将List转为数组
-            ActivityCompat.requestPermissions(LoginActivity.this, permissions, PERMISSION_REQUEST);
-        }
-    }
 
-    /**
-     * 响应授权
-     * 这里不管用户是否拒绝，都进入首页，不再重复申请权限
-     */
-    @Override
-    public void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions, @NonNull int[] grantResults) {
-        super.onRequestPermissionsResult(requestCode, permissions, grantResults);
-        switch (requestCode) {
-            case PERMISSION_REQUEST:
-                //delayEntryPage();
-                break;
-            default:
-                break;
-        }
-    }
+
 }

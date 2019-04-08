@@ -68,4 +68,7 @@
     <string name="input_user_prompt">请输入用户名</string>
     <string name="input_psd_prompt">请输入密码</string>
     <string name="please_wait">请稍后..</string>
+    <string name="setting">设置</string>
+    <string name="notifyTitle">提示</string>
+    <string name="notifyMsg">如果不授予所有权限，程序将退出</string>
 </resources>

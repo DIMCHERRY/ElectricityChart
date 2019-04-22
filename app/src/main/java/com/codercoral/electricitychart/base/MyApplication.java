@@ -2,6 +2,8 @@ package com.codercoral.electricitychart.base;
 
 import android.app.Application;
 
+import cn.bmob.v3.Bmob;
+
 
 public class MyApplication  extends Application {
     public static boolean isDebug = true;
@@ -15,6 +17,7 @@ public class MyApplication  extends Application {
 
     @Override
     public void onCreate() {
+        Bmob.initialize(this, "c80c01865a80121e07991434d2a3ecfd");
         super.onCreate();
         app = this;
     }

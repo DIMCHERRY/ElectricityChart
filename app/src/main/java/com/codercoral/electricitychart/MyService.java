@@ -7,6 +7,8 @@ import android.os.Binder;
 import android.os.IBinder;
 import android.util.Log;
 
+import java.util.HashMap;
+
 public class MyService extends Service {
     private MediaPlayer mediaPlayer;
 
@@ -25,7 +27,6 @@ public class MyService extends Service {
         }
         return START_STICKY;
     }
-
     @Override
     public IBinder onBind(Intent intent) {
         // TODO: Return the communication channel to the service.

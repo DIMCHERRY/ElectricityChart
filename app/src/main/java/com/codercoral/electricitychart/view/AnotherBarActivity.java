@@ -11,6 +11,7 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.WindowManager;
 
+import com.codercoral.electricitychart.MyService;
 import com.codercoral.electricitychart.R;
 import com.codercoral.electricitychart.entity.TransformerLoadRate;
 import com.github.mikephil.charting.charts.BarChart;

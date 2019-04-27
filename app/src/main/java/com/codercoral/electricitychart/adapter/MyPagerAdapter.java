@@ -13,7 +13,7 @@ import androidx.fragment.app.FragmentStatePagerAdapter;
 
 public class MyPagerAdapter extends FragmentStatePagerAdapter {
     final int PAGE_COUNT = 3;
-    private String tabTitles[] = new String[]{"负载率图表", "休闲视频", "今日新闻"};
+    private String tabTitles[] = new String[]{"负载率图表", "休闲视频", "提交反馈"};
     private Context context;
 
     public MyPagerAdapter(FragmentManager fm, Context context) {

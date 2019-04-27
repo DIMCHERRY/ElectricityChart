@@ -5,6 +5,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
 import android.text.TextUtils;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -22,29 +23,18 @@ import cn.bmob.v3.BmobUser;
 import cn.bmob.v3.exception.BmobException;
 import cn.bmob.v3.listener.SaveListener;
 
-public class LoginActivity extends Activity {
+public class LoginActivity extends Activity implements View.OnClickListener {
 
-    @BindView(R.id.logo)
     ImageView logo;
-    @BindView(R.id.et_username)
     EditText etUsername;
-    @BindView(R.id.iv_clean_phone)
     ImageView ivCleanPhone;
-    @BindView(R.id.rl_phone)
     RelativeLayout rlPhone;
-    @BindView(R.id.et_psd)
     EditText etPsd;
-    @BindView(R.id.clean_password)
     ImageView cleanPassword;
-    @BindView(R.id.iv_show_pwd)
     ImageView ivShowPwd;
-    @BindView(R.id.rl_psd)
     RelativeLayout rlPsd;
-    @BindView(R.id.tv_register)
     TextView tvRegister;
-    @BindView(R.id.btn_login)
     Button btnLogin;
-    @BindView(R.id.pb)
     ProgressBar pb;
 
 
@@ -52,21 +42,15 @@ public class LoginActivity extends Activity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
+        pb = findViewById(R.id.pb);
+        etUsername = findViewById(R.id.et_username);
+        etPsd = findViewById(R.id.et_psd);
+        btnLogin = findViewById(R.id.btn_login);
+        tvRegister = findViewById(R.id.tv_register);
+        btnLogin.setOnClickListener(this);
+        tvRegister.setOnClickListener(this);
     }
 
-
-
-    @OnClick({R.id.tv_register, R.id.btn_login})
-    public void onViewClicked(View view) {
-        switch (view.getId()) {
-            case R.id.tv_register:
-                startActivity(new Intent(LoginActivity.this, RegisterActivity.class));
-                break;
-            case R.id.btn_login:
-                login();
-                break;
-        }
-    }
 
     public void login() {
         final String accountName = etUsername.getText().toString().trim();//账号
@@ -94,10 +78,12 @@ public class LoginActivity extends Activity {
                 public void done(BmobUser bmobUser, BmobException e) {
                     if (e == null) {
                         //登录成功后进入主界面
-                        Intent intent = new Intent(LoginActivity.this, MultiLineChartActivity.class);
+                        Intent intent = new Intent(LoginActivity.this, MainActivity.class);
                         startActivity(intent);
+                        Log.d(" success","yeah");
                         finish();
                     } else {
+                        Log.d("not success",e.getMessage());
                         Toast.makeText(getApplicationContext(), " " + e.getMessage(), Toast.LENGTH_SHORT).show();
                         hiddenProgressBar();//隐藏
                     }
@@ -116,5 +102,16 @@ public class LoginActivity extends Activity {
     }
 
 
+    @Override
+    public void onClick(View v) {
+        switch (v.getId()) {
+            case R.id.tv_register:
+                startActivity(new Intent(LoginActivity.this, RegisterActivity.class));
+                break;
+            case R.id.btn_login:
+                login();
+                break;
+        }
 
+    }
 }

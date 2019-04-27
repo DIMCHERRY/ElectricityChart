@@ -21,11 +21,11 @@ import cn.bmob.v3.listener.SaveListener;
 
 
 public class RegisterActivity extends Activity {
-    @BindView(R.id.et_username)
+    @BindView(R.id.et_register_username)
     EditText etUsername;
     @BindView(R.id.iv_clean_phone)
     ImageView ivCleanPhone;
-    @BindView(R.id.et_psd)
+    @BindView(R.id.et_register_psd)
     EditText etPsd;
     @BindView(R.id.clean_password)
     ImageView cleanPassword;

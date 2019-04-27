@@ -4,11 +4,9 @@ import android.app.Application;
 
 import cn.bmob.v3.Bmob;
 
-
-public class MyApplication  extends Application {
+public class MyApplication extends Application {
     public static boolean isDebug = true;
     public static String APP_NAME = "Electricity Chart";
-
     private static MyApplication app;
 
     public static MyApplication getInstance() {

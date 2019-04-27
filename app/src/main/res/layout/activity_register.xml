@@ -32,7 +32,7 @@
                 android:src="@mipmap/ic_user"/>
 
             <EditText
-                android:id="@+id/et_username"
+                android:id="@+id/et_register_username"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_toRightOf="@+id/iv_user"
@@ -75,7 +75,7 @@
                 android:src="@mipmap/ic_password"/>
 
             <EditText
-                android:id="@+id/et_psd"
+                android:id="@+id/et_register_psd"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_toRightOf="@+id/iv_password"

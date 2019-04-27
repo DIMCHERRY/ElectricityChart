@@ -18,7 +18,6 @@ import butterknife.ButterKnife;
 //双柱图显示负载率
 public class MainActivity extends FragmentActivity {
 
-
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

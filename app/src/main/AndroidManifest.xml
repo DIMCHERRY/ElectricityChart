@@ -27,16 +27,19 @@
         android:usesCleartextTraffic="true"
         tools:ignore="GoogleAppIndexingWarning">
         <activity android:name=".view.LoginActivity">
-
-        </activity>
-        <activity android:name=".view.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".view.RegisterActivity" />
+        <activity android:name=".view.MainActivity">
+
+        </activity>
+        <activity android:name=".view.RegisterActivity" >
+
+
+        </activity>
         <activity android:name=".view.AnotherBarActivity" />
         <activity android:name=".view.LineChartActivity"/>
         <activity android:name=".view.MultiLineChartActivity"/>

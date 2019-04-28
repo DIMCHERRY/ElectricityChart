@@ -3,8 +3,8 @@ package com.codercoral.electricitychart.adapter;
 import android.content.Context;
 
 
-import com.codercoral.electricitychart.view.ChartFragment;
-import com.codercoral.electricitychart.view.ObjectFragment;
+import com.codercoral.electricitychart.view.fragment.ChartFragment;
+import com.codercoral.electricitychart.view.fragment.ObjectFragment;
 
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;

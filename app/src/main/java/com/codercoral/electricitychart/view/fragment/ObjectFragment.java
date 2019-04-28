@@ -1,4 +1,4 @@
-package com.codercoral.electricitychart.view;
+package com.codercoral.electricitychart.view.fragment;
 
 import android.os.Bundle;
 import android.view.LayoutInflater;

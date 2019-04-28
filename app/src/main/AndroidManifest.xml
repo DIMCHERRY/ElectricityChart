@@ -17,12 +17,12 @@
     <uses-permission android:name="android.permission.READ_PHONE_STATE" />
 
     <application
+        android:name=".base.MyApplication"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:name=".base.MyApplication"
         android:theme="@style/AppTheme"
         android:usesCleartextTraffic="true"
         tools:ignore="GoogleAppIndexingWarning">
@@ -36,21 +36,15 @@
         <activity android:name=".view.MainActivity">
 
         </activity>
-        <activity android:name=".view.RegisterActivity" >
+        <activity android:name=".view.RegisterActivity">
 
 
         </activity>
-        <activity android:name=".view.AnotherBarActivity" />
-        <activity android:name=".view.LineChartActivity"/>
-        <activity android:name=".view.MultiLineChartActivity"/>
+
         <provider
             android:name="cn.bmob.v3.util.BmobContentProvider"
-            android:authorities="com.codercoral.electricitychart.BmobContentProvider"/>
+            android:authorities="com.codercoral.electricitychart.BmobContentProvider" />
 
-        <service
-            android:name=".MyService"
-            android:enabled="true"
-            android:exported="true"/>
     </application>
 
 </manifest>

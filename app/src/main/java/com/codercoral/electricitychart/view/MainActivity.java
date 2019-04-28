@@ -1,9 +1,11 @@
 package com.codercoral.electricitychart.view;
 
 import android.os.Bundle;
+import android.view.WindowManager;
 
 import com.codercoral.electricitychart.R;
 import com.codercoral.electricitychart.adapter.MyPagerAdapter;
+import com.codercoral.electricitychart.view.fragment.ChartFragment;
 import com.google.android.material.tabs.TabLayout;
 
 import java.util.ArrayList;
@@ -13,7 +15,6 @@ import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentActivity;
 import androidx.viewpager.widget.ViewPager;
-import butterknife.ButterKnife;
 
 //双柱图显示负载率
 public class MainActivity extends FragmentActivity {
@@ -22,9 +23,8 @@ public class MainActivity extends FragmentActivity {
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        ButterKnife.bind(this);
-        setTitle("主页");
-
+        getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,
+                WindowManager.LayoutParams.FLAG_FULLSCREEN);
         ChartFragment f1 = new ChartFragment();
         List<Fragment> fragmentContainter = new ArrayList<>();
         fragmentContainter.add(f1);

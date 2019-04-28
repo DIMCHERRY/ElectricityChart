@@ -85,6 +85,32 @@
     <string name="pack_box">每箱%1$s提</string>
     <string name="totalnum">%1$s饼</string>
 
+    <string name="icon_name">面试题</string>
+    <string name="action_about">关于</string>
+    <string name="action_setting">设置</string>
+    <string name="exit_app_hint">再按一退出程序</string>
+    <string name="submit_question">提交你遇到的BUG或建议</string>
+    <string name="submit_issues">程序有BUG可以从这提交</string>
+    <string name="text_about">视频内容均来自互联网，如有侵权请联系我删除。</string>
+    <string name="text_explain">声明</string>
+    <string name="text_version_name">版本说明</string>
+    <string name="text_github_url">项目已开源到Github</string>
+    <string name="text_alipay_donate">支付宝打赏</string>
+    <string name="text_donate_explain">如果觉得我收集的面试题对您有用，请随意打赏。</string>
+
+    <string name="java_questions">Java面试题</string>
+    <string name="android_base_questions">Android基础面试题</string>
+    <string name="android_senior_questions">Android高级面试题</string>
+    <string name="java_web_questions">JavaWeb面试题</string>
+
+    <string name="setting_show">显示设置</string>
+    <string name="is_show_javaweb">是否显示JavaWeb面试题</string>
+    <string name="is_show_androidbase">是否显示Android基础面试题</string>
+    <string name="is_show_android_senior">是否显示Android高级面试题</string>
+    <string name="is_show_java">是否显示Java面试题</string>
+
+    <string name="setting_other">其它设置</string>
+    <string name="nothing">暂无</string>
     <!--toolBar-->
     <string name="toolbar_login">云茶追溯D端登录</string>
     <string name="toolbar_home">首页</string>

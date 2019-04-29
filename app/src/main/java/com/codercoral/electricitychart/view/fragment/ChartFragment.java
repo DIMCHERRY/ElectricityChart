@@ -60,7 +60,7 @@ public class ChartFragment extends Fragment {
         mCalendar.setOnDateChangeListener(new CalendarView.OnDateChangeListener() {
             @Override
             public void onSelectedDayChange(CalendarView view, int year, int month, int dayOfMonth) {
-                Log.d("您选择的时间是：" + year + "年" + month + "月" + dayOfMonth + "日", "tag");
+                initData();
             }
         });
 
@@ -88,7 +88,7 @@ public class ChartFragment extends Fragment {
         chart.animateY(1500);
 
         chart.getLegend().setEnabled(false);
-        initData();
+
         return root;
     }
 

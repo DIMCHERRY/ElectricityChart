@@ -43,7 +43,6 @@ public class FeedbackFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        // TODO Auto-generated method stub
         View view = inflater.inflate(R.layout.fragment_feedback, container, false);
         submit = view.findViewById(R.id.submit);
         return view;

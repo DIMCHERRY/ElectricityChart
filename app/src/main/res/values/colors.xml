@@ -30,4 +30,20 @@
     <color name="line1fill">#ECEAD0</color>
     <color name="line2">#9F8FBA</color>
     <color name="line2fill">#EBE4F8</color>
+
+    <color name="applicationColor">#fff</color>
+    <color name="default_page">#f7f7f7</color>
+    <!--MY-->
+    <color name="tabnosel">#ffffff</color>
+    <color name="gray_dfdfdf">#dfdfdf</color>
+    <color name="tab_textColor">#8A8A8A</color>
+    <color name="textColor_black">#FF172733</color>
+    <color name="welcome_tvbg">#ae707070</color>
+    <!--BottomBar-->
+    <color name="tab_index_bg">#f7aeff</color>
+    <color name="tab_news_bg">#b9aeff</color>
+    <color name="tab_img_bg">#b2e7a1</color>
+    <color name="tab_videos_bg">#a1d1ff</color>
+    <!--Video-->
+    <color name="item_video_bg">#eff4ff</color>
 </resources>

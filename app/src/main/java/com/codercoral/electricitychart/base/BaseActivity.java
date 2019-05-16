@@ -25,8 +25,6 @@ import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.widget.Toolbar;
 import androidx.core.app.ActivityCompat;
 import androidx.core.content.ContextCompat;
-import butterknife.ButterKnife;
-import butterknife.Unbinder;
 
 public abstract class BaseActivity extends Activity implements
         View.OnClickListener {
@@ -34,7 +32,6 @@ public abstract class BaseActivity extends Activity implements
     protected Toolbar mToolbar;
 
     /**解绑防止内存泄漏**/
-    private Unbinder mUnbinder;
 
     /** 是否沉浸状态栏 **/
     private boolean isSetStatusBar = true;
@@ -73,7 +70,6 @@ public abstract class BaseActivity extends Activity implements
             }
             //绑定视图
             setContentView(bindLayout());
-            mUnbinder = ButterKnife.bind(this);
             //检查权限
             checkPermissions(mNeedPermissions);
             if (!isAllowScreenRoate) {
@@ -195,7 +191,6 @@ public abstract class BaseActivity extends Activity implements
     protected void onDestroy() {
         super.onDestroy();
         $Log(TAG + "--->onDestroy()");
-        mUnbinder.unbind();
     }
 
     /**

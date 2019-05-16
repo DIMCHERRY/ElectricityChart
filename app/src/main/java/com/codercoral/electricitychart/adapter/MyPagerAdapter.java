@@ -3,6 +3,7 @@ package com.codercoral.electricitychart.adapter;
 import android.content.Context;
 
 
+import com.codercoral.electricitychart.video.codercoral.videos.VideoFragment;
 import com.codercoral.electricitychart.view.fragment.ChartFragment;
 import com.codercoral.electricitychart.view.fragment.FeedbackFragment;
 import com.codercoral.electricitychart.view.fragment.NewsFragment;
@@ -14,8 +15,8 @@ import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentStatePagerAdapter;
 
 public class MyPagerAdapter extends FragmentStatePagerAdapter {
-    final int PAGE_COUNT = 3;
-    private String tabTitles[] = new String[]{"负载率图表", "电网资讯", "提交反馈"};
+    final int PAGE_COUNT = 4;
+    private String tabTitles[] = new String[]{"负载率图表", "电网资讯","休闲视频", "提交反馈"};
     private Context context;
 
     public MyPagerAdapter(FragmentManager fm, Context context) {
@@ -37,6 +38,8 @@ public class MyPagerAdapter extends FragmentStatePagerAdapter {
             case 1:
                 return NewsFragment.newInstance(position+1);
             case 2:
+                return VideoFragment.Companion.newInstance(position+1);
+            case 3:
                 return FeedbackFragment.newInstance(position+1);
             default:
                 break;

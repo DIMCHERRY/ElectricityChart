@@ -15,12 +15,10 @@ import java.util.Objects;
 
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
-import butterknife.BindView;
 
 public class FeedbackFragment extends Fragment {
     private static final String Feedback = "Feedback";
     Button submit;
-    @BindView(R.id.snackbar_text)
     TextView snackbarText;
     private int mPage;
 
@@ -45,6 +43,7 @@ public class FeedbackFragment extends Fragment {
                              Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_feedback, container, false);
         submit = view.findViewById(R.id.submit);
+        snackbarText = view.findViewById(R.id.snackbar_text);
         return view;
     }
 

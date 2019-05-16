@@ -11,9 +11,12 @@ import android.widget.Toast;
 
 import com.codercoral.electricitychart.R;
 import com.codercoral.electricitychart.adapter.MyPagerAdapter;
+import com.codercoral.electricitychart.video.codercoral.base.BaseActivity;
 import com.codercoral.electricitychart.view.fragment.ChartFragment;
 import com.google.android.material.snackbar.Snackbar;
 import com.google.android.material.tabs.TabLayout;
+
+import org.jetbrains.annotations.NotNull;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -24,7 +27,7 @@ import androidx.fragment.app.FragmentActivity;
 import androidx.viewpager.widget.ViewPager;
 
 //双柱图显示负载率
-public class MainActivity extends FragmentActivity {
+public class MainActivity extends BaseActivity {
     LinearLayout llmain;
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -72,5 +75,35 @@ public class MainActivity extends FragmentActivity {
             return true;
         }
         return super.onKeyDown(keyCode, event);
+    }
+
+    @Override
+    protected void initParms(@org.jetbrains.annotations.Nullable Bundle parms) {
+
+    }
+
+    @Override
+    protected int getLayoutId() {
+        return R.layout.activity_main;
+    }
+
+    @Override
+    protected void initView(@NotNull View view) {
+
+    }
+
+    @Override
+    protected void setListener() {
+
+    }
+
+    @Override
+    protected void widgetClick(@NotNull View v) {
+
+    }
+
+    @Override
+    public void onClick(View v) {
+
     }
 }
